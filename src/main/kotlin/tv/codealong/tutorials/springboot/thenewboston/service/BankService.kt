@@ -1,15 +1,16 @@
 package tv.codealong.tutorials.springboot.thenewboston.service
 
 import org.springframework.stereotype.Service
-import tv.codealong.tutorials.springboot.thenewboston.datasource.BankDataSource
+import tv.codealong.tutorials.springboot.thenewboston.port.`in`.BankDataSource
 import tv.codealong.tutorials.springboot.thenewboston.model.Bank
+import tv.codealong.tutorials.springboot.thenewboston.port.`out`.BankUseCase
 
 @Service
-class BankService(private val dataSource: BankDataSource) {
+class BankService(private val dataSource: BankDataSource) : BankUseCase {
 
-    fun getBanks(): Collection<Bank> = dataSource.retrieveBanks()
-    fun getBank(accountNumber: String): Bank = dataSource.retrieveBank(accountNumber)
-    fun addBank(bank: Bank): Bank = dataSource.createBank(bank)
-    fun updateBank(bank: Bank): Bank = dataSource.updateBank(bank)
-    fun deleteBank(accountNumber: String) = dataSource.deleteBank(accountNumber)
+    override fun getBanks(): Collection<Bank> = dataSource.retrieveBanks()
+    override fun getBank(accountNumber: String): Bank = dataSource.retrieveBank(accountNumber)
+    override fun addBank(bank: Bank): Bank = dataSource.createBank(bank)
+    override fun updateBank(bank: Bank): Bank = dataSource.updateBank(bank)
+    override fun deleteBank(accountNumber: String) = dataSource.deleteBank(accountNumber)
 }

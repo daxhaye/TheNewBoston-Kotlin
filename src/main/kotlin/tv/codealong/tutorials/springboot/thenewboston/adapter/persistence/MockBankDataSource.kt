@@ -1,12 +1,8 @@
 package tv.codealong.tutorials.springboot.thenewboston.adapter.persistence
 
-import org.springframework.stereotype.Repository
-import org.springframework.web.client.HttpClientErrorException.NotFound
-import tv.codealong.tutorials.springboot.thenewboston.adapter.persistence.BankDataSource
-import tv.codealong.tutorials.springboot.thenewboston.model.Bank
 
-@Repository
-class MockBankDataSource : BankDataSource {
+class MockBankDataSource
+/*: BankDataSource {
 
     val banks = mutableListOf(
         Bank("1234", 3.14, 17),
@@ -43,4 +39,4 @@ class MockBankDataSource : BankDataSource {
 
         banks.remove(updateBank)
     }
-}
+}*/

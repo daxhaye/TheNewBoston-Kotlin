@@ -1,4 +1,4 @@
-package tv.codealong.tutorials.springboot.thenewboston.datasource
+package tv.codealong.tutorials.springboot.thenewboston.port.`in`
 
 import tv.codealong.tutorials.springboot.thenewboston.model.Bank
 

@@ -4,7 +4,7 @@ import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
 import tv.codealong.tutorials.springboot.thenewboston.model.Bank
-import tv.codealong.tutorials.springboot.thenewboston.port.BankUseCase
+import tv.codealong.tutorials.springboot.thenewboston.port.`out`.BankUseCase
 
 @RestController
 @RequestMapping("/api/banks")
